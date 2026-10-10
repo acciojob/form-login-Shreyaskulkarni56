@@ -1,12 +1,8 @@
-function getFormvalue() {
-    //Write your code here
-	document.getElementById("form1").addEventListener("Submit",function (event){
-    event.preventDefault();	
-		
-	})
-	let FirstName = document.getElementById("fname").values;
-	let LastName = document.getElementById("lname").values;
+function getFormvalue(event) {
+    event.preventDefault();
 
-	alter=("First Name ",fname  + "Last Name" ,lname);
-	
+    let firstName = document.querySelector('[name="fname"]').value.trim();
+    let lastName = document.querySelector('[name="lname"]').value.trim();
+
+    alert((firstName + " " + lastName).trim());
 }
